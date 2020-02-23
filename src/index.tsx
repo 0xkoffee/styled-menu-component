@@ -8,13 +8,7 @@ import { UsersMenu, User } from './components/users-menu/users-menu'
 
 console.info(`⚛️ ${React.version}`)
 
-const CenteredMenu: typeof Menu = styled(Menu)`
-  align-self: center;
-  margin: 0 auto;
-  font-family: Inter;
-`
-
-const CenteredUsersMenu: typeof UsersMenu = styled(UsersMenu)`
+const CenteredMenu = styled(Menu)`
   align-self: center;
   margin: 0 auto;
   font-family: Inter;
@@ -58,7 +52,8 @@ const App = () => {
         onChange={console.log}
         value="My steps"
       />
-      <CenteredUsersMenu
+      <CenteredMenu
+        as={UsersMenu}
         options={userOptions}
         onChange={console.log}
         value={users[3]}

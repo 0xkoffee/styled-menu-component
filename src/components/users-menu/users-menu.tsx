@@ -22,7 +22,7 @@ const UsersMenu: FC<MenuProps<User>> = ({ ...props }) => {
   )
 }
 
-const StyledUsersMenu: typeof UsersMenu = styled(UsersMenu)`
+const StyledUsersMenu = styled(UsersMenu)`
   .${rcn('users-menu')} {
     margin: 10px 0;
   }
